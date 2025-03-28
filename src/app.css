@@ -14,9 +14,9 @@
 		--card-foreground: 20 14.3% 4.1%;
 		--border: 20 5.9% 90%;
 		--input: 20 5.9% 90%;
-		--primary: 24 9.8% 10%;
+		--primary: 270 79% 55%; /* #8B2FE7 */
 		--primary-foreground: 60 9.1% 97.8%;
-		--secondary: 60 4.8% 95.9%;
+		--secondary: 274 82% 44%; /* hsl(274, 82%, 44%) */
 		--secondary-foreground: 24 9.8% 10%;
 		--accent: 60 4.8% 95.9%;
 		--accent-foreground: 24 9.8% 10%;
@@ -32,10 +32,11 @@
 		--sidebar-accent-foreground: 240 5.9% 10%;
 		--sidebar-border: 220 13% 91%;
 		--sidebar-ring: 217.2 91.2% 59.8%;
+		--title-gradient:
 	}
 
 	.dark {
-		--background: 20 14.3% 4.1%;
+		--background: 270 33% 1%; /* hsl(270, 33%, 1%) */
 		--foreground: 60 9.1% 97.8%;
 		--muted: 12 6.5% 15.1%;
 		--muted-foreground: 24 5.4% 63.9%;
@@ -45,9 +46,9 @@
 		--card-foreground: 60 9.1% 97.8%;
 		--border: 12 6.5% 15.1%;
 		--input: 12 6.5% 15.1%;
-		--primary: 60 9.1% 97.8%;
+		--primary: 270 79% 55%; /* #8B2FE7 */
 		--primary-foreground: 24 9.8% 10%;
-		--secondary: 12 6.5% 15.1%;
+		--secondary: 274 82% 44%; /* hsl(274, 82%, 44%) */
 		--secondary-foreground: 60 9.1% 97.8%;
 		--accent: 12 6.5% 15.1%;
 		--accent-foreground: 60 9.1% 97.8%;
@@ -62,6 +63,7 @@
 		--sidebar-accent-foreground: 240 4.8% 95.9%;
 		--sidebar-border: 240 3.7% 15.9%;
 		--sidebar-ring: 217.2 91.2% 59.8%;
+		--title-gradient: linear-gradient(to bottom, #fcdacf, #fcded4, #fce2d9, #fde5de, #fde9e2, #fef0ec);
 	}
 }
 
@@ -79,11 +81,11 @@
 	}
 
 	h1 {
-		@apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+		@apply scroll-m-20 text-4xl font-extrabold tracking-tight text-foreground lg:text-5xl;
 	}
 
 	h2 {
-		@apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0;
+		@apply scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0;
 	}
 
 	h3 {
@@ -104,5 +106,19 @@
 
 	code {
 		@apply relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
+	}
+
+	button {
+		padding: 16px 28px;
+	}
+
+	.glow {
+		box-shadow: 0px 1px 30px -20px #aa9de58a;
+	}
+
+	.title-gradient{
+		background: var(--title-gradient);
+		background-clip: text;
+		color: transparent;
 	}
 }
