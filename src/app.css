@@ -70,18 +70,20 @@
 @layer base {
 	* {
 		@apply border-border;
-    box-sizing: border-box;
+    	box-sizing: border-box;
 	}
   html, body {
     height: 100%;
     width: 100%;
+	padding: 0;
+	margin: 0;
   }
 	body {
 		@apply bg-background text-foreground;
 	}
 
 	h1 {
-		@apply scroll-m-20 text-4xl font-extrabold tracking-tight text-foreground lg:text-5xl;
+		@apply scroll-m-20 text-3xl  sm:text-4xl font-extrabold tracking-tight text-foreground lg:text-5xl;
 	}
 
 	h2 {

@@ -21,7 +21,7 @@
 
 <div class="@container fixed top-6 z-50 flex w-full items-center justify-center self-center">
 	<div
-		class="glow flex w-fit flex-row items-center justify-between gap-2 rounded-full border bg-background/70 px-6 sm:gap-12"
+		class="header glow flex w-fit flex-row items-center justify-between gap-2 rounded-full border bg-background/75 px-6 sm:gap-12"
 	>
 		<a href="/" class="group flex flex-row items-center justify-center">
 			<img src="/personalFlow.svg" alt="Personal Flow" class="size-16" />
@@ -117,5 +117,8 @@
 </div>
 
 <style>
-	/* Add any additional styling here if needed */
+	.header{
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+    }
 </style>

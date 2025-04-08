@@ -5,10 +5,10 @@
 	import ScreenSize from '$lib/components/ScreenSize.svelte';
 	let { children } = $props();
 </script>
-<div class="h-full w-full relative">
+<div class="w-full">
 	<ModeWatcher defaultMode="dark" />
 	<Header />
-	{@render children()}
+		{@render children()}
 </div>
 
-<ScreenSize/>
+<!-- <ScreenSize/> -->
